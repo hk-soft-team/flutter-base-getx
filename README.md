@@ -2,39 +2,61 @@
 
 플러터 프로젝트를 빠르게 진행하기 위한 기본 베이스 (GetX)
 
+<br/><br/>
+---
+<br/><br/>
+
 ## 다트 정보
 
-Dart 2.17.0
+Dart 3.0.0
 DevTools 2.12.2
+
+<br/><br/>
+---
+<br/><br/>
 
 ## 플러터 정보
 
 Flutter 3.0.0(channel stable)
 
+<br/><br/>
+---
+<br/><br/>
+
 ## 안드로이드 정보
 
 ### build.gradle
 
-File Path : "android\build.gradle"
-Kotlin Version : ext.kotlin_version = '1.6.10'
-Gradle Version : classpath 'com.android.tools.build:gradle:7.0.2'
+"android\build.gradle"
+```
+ext.kotlin_version = '1.6.21'   
+classpath 'com.android.tools.build:gradle:7.2.0'
+```
 
 ### gradle-wrapper.properties
 
-File Path : "android\gradle\wrapper\gradle-wrapper.properties"
-Gradle Version : distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-all.zip
+"android\gradle\wrapper\gradle-wrapper.properties"
+```
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-all.zip
+```
 
-### android\app\build.gradle
+### app\build.gradle
 
-Min SDK Version : minSdkVersion 21
-※ 최소 SDK 버전 하단 기본값 주석처리되어있음
+"android\app\build.gradle"
+<img src="https://postfiles.pstatic.net/MjAyMjA1MTRfMyAg/MDAxNjUyNTA5NDk4NjU0.fIImQ3l912o0KImUXQp0xQ6CpM2kPV28PK8c3Sxcb5og.nzsvnMoWbqZJcQOzOGI9D_9ubUa4nzh1ya6py6G6rfAg.PNG.phongdaegi/image.png?type=w773" width="100%" height="450px" alt="사용자 비율"></img><br/><br/>
+```
+minSdkVersion 23
+```
+
+<br/><br/>
+---
+<br/><br/>
 
 ## 안드로이드 최적화
 
 ### build.gradle
 
-릴리즈 모드 옵션 추가   
-
+릴리즈 모드 옵션 추가
 ```
 release {
     signingConfig signingConfigs.debug
@@ -44,7 +66,6 @@ release {
 ```
 
 디버그 모드 옵션 추가
-
 ```
 debug {
     minifyEnabled false
@@ -53,7 +74,9 @@ debug {
 }
 ```
 
+<br/><br/>
 ---
+<br/><br/>
 
 ## 패키지 이름 변경
 
