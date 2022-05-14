@@ -41,7 +41,7 @@ classpath 'com.android.tools.build:gradle:7.2.0'
 
 "android\gradle\wrapper\gradle-wrapper.properties"
 ```
-distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-all.zip
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.4.2-all.zip
 ```
 
 ### app\build.gradle
