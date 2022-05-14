@@ -37,6 +37,15 @@ ext.kotlin_version = '1.6.21'
 classpath 'com.android.tools.build:gradle:7.2.0'
 ```
 
+### gradle.properties
+"android\gradle.properties"
+Gradle에서 사용하는 최적의 JVM 가비지 수집기를 구성하여 빌드 성능을 개선할 수 있습니다. JDK 8은 기본적으로 병렬 가비지 수집기를 사용하도록 구성되어 있지만, JDK 9 이상에서는 G1 가비지 수집기를 사용하도록 구성됩니다.
+
+빌드 성능을 개선하려면 병렬 가비지 수집기로 Gradle 빌드를 테스트하는 것이 좋습니다. gradle.properties에서 다음을 설정합니다.
+```
+org.gradle.jvmargs=-Xmx1536M -XX:+UseParallelGC
+```
+
 ### gradle-wrapper.properties
 
 "android\gradle\wrapper\gradle-wrapper.properties"
@@ -51,7 +60,16 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-7.4.2-all.zip
 2022년 기준 롤리팝(21) 혹은 마시멜로(23) 기준으로 설정해주면 됩니다.   
 [자세한 내용](https://blog.naver.com/phongdaegi/222732273987)
 ```
-minSdkVersion 23
+defaultConfig {
+    applicationId "com.reafela.photoheim"
+    minSdkVersion 23
+    // minSdkVersion flutter.minSdkVersion
+    targetSdkVersion flutter.targetSdkVersion
+    versionCode flutterVersionCode.toInteger()
+    versionName flutterVersionName
+    // 다음 스니펫은 언어 리소스를 영어와 프랑스어로 제한하는 방법을 보여줍니다.
+    resConfigs "ko", "en"
+}
 ```
 
 ---
@@ -79,7 +97,7 @@ debug {
 ```
 
 #### 여러개의 APK 생성 제한
-##### 화면 밀도나 ABI(Application Binary Interface)에 따라 여러 개의 APK를 빌드하는 작업에는 시간이 소요되기 때문에 비활성화
+화면 밀도나 ABI(Application Binary Interface)에 따라 여러 개의 APK를 빌드하는 작업에는 시간이 소요되기 때문에 비활성화
 ```
 splits {
     abi {
