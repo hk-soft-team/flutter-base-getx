@@ -29,6 +29,21 @@ Gradle Version : distributionUrl=https\://services.gradle.org/distributions/grad
 Min SDK Version : minSdkVersion 21
 ※ 최소 SDK 버전 하단 기본값 주석처리되어있음
 
+## 안드로이드 최적화
+
+### build.gradle
+
+릴리즈 모드 옵션 추가
+minifyEnabled true
+debuggable false
+
+디버그 모드 옵션 추가
+debug {
+minifyEnabled false
+debuggable true
+aaptOptions.cruncherEnabled = false
+}
+
 ## 패키지 이름 변경
 
 VSCODE 기준
