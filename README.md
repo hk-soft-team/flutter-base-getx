@@ -34,8 +34,9 @@ Min SDK Version : minSdkVersion 21
 ### build.gradle
 
 릴리즈 모드 옵션 추가
-minifyEnabled true
-debuggable false
+
+    minifyEnabled true
+    debuggable false
 
 디버그 모드 옵션 추가
 
