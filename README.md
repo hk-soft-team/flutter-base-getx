@@ -38,6 +38,7 @@ minifyEnabled true
 debuggable false
 
 디버그 모드 옵션 추가
+
     debug {
         minifyEnabled false
         debuggable true
