@@ -35,8 +35,11 @@ Min SDK Version : minSdkVersion 21
 
 릴리즈 모드 옵션 추가
 
-    minifyEnabled true
-    debuggable false
+    release {
+        signingConfig signingConfigs.debug
+        minifyEnabled true
+        debuggable false
+    }
 
 디버그 모드 옵션 추가
 
