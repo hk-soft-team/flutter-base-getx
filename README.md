@@ -79,7 +79,7 @@ debug {
 ```
 
 #### 여러개의 APK 생성 제한
-화면 밀도나 ABI(Application Binary Interface)에 따라 여러 개의 APK를 빌드하는 작업에는 시간이 소요되기 때문에 비활성화
+##### 화면 밀도나 ABI(Application Binary Interface)에 따라 여러 개의 APK를 빌드하는 작업에는 시간이 소요되기 때문에 비활성화
 ```
 splits {
     abi {
