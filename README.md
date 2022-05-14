@@ -2,26 +2,20 @@
 
 플러터 프로젝트를 빠르게 진행하기 위한 기본 베이스 (GetX)
 
-<br/>
 ---
-<br/>
 
 ## 다트 정보
 
 Dart 3.0.0
 DevTools 2.12.2
 
-<br/>
 ---
-<br/>
 
 ## 플러터 정보
 
 Flutter 3.0.0(channel stable)
 
-<br/>
 ---
-<br/>
 
 ## 안드로이드 정보
 
@@ -43,14 +37,12 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-all.zip
 ### app\build.gradle
 
 "android\app\build.gradle"
-<img src="https://postfiles.pstatic.net/MjAyMjA1MTRfMyAg/MDAxNjUyNTA5NDk4NjU0.fIImQ3l912o0KImUXQp0xQ6CpM2kPV28PK8c3Sxcb5og.nzsvnMoWbqZJcQOzOGI9D_9ubUa4nzh1ya6py6G6rfAg.PNG.phongdaegi/image.png?type=w773" width="100%" height="450px" alt="사용자 비율"></img><br/>
+<img src="https://postfiles.pstatic.net/MjAyMjA1MTRfMyAg/MDAxNjUyNTA5NDk4NjU0.fIImQ3l912o0KImUXQp0xQ6CpM2kPV28PK8c3Sxcb5og.nzsvnMoWbqZJcQOzOGI9D_9ubUa4nzh1ya6py6G6rfAg.PNG.phongdaegi/image.png?type=w773" width="100%" height="450px" alt="사용자 비율"></img>
 ```
 minSdkVersion 23
 ```
 
-<br/>
 ---
-<br/>
 
 ## 안드로이드 최적화
 
@@ -74,9 +66,7 @@ debug {
 }
 ```
 
-<br/>
 ---
-<br/>
 
 ## 패키지 이름 변경
 
