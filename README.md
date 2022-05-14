@@ -6,14 +6,15 @@
 
 ## 다트 정보
 
-Dart 3.0.0
-DevTools 2.12.2
+[Dart 2.17.0](https://dart.dev/get-dart/archive)   
+[DevTools 2.12.2](https://dart.dev/get-dart/archive)
 
 ---
 
 ## 플러터 정보
 
-Flutter 3.0.0(channel stable)
+[Flutter 3.0.0(channel stable)](https://docs.flutter.dev/development/tools/sdk/releases)   
+※ 하위 버젼에서도 가능합니다.
 
 ---
 
@@ -36,8 +37,10 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-all.zip
 
 ### app\build.gradle
 
-"android\app\build.gradle"
-<img src="https://postfiles.pstatic.net/MjAyMjA1MTRfMyAg/MDAxNjUyNTA5NDk4NjU0.fIImQ3l912o0KImUXQp0xQ6CpM2kPV28PK8c3Sxcb5og.nzsvnMoWbqZJcQOzOGI9D_9ubUa4nzh1ya6py6G6rfAg.PNG.phongdaegi/image.png?type=w773" width="100%" height="450px" alt="사용자 비율"></img>
+<img src="https://postfiles.pstatic.net/MjAyMjA1MTRfMyAg/MDAxNjUyNTA5NDk4NjU0.fIImQ3l912o0KImUXQp0xQ6CpM2kPV28PK8c3Sxcb5og.nzsvnMoWbqZJcQOzOGI9D_9ubUa4nzh1ya6py6G6rfAg.PNG.phongdaegi/image.png?type=w773" width="100%" alt="사용자 비율"></img>
+"android\app\build.gradle"   
+2022년 기준 롤리팝(21) 혹은 마시멜로(23) 기준으로 설정해주면 됩니다.   
+[자세한 내용](https://blog.naver.com/phongdaegi/222732273987)
 ```
 minSdkVersion 23
 ```
@@ -48,7 +51,7 @@ minSdkVersion 23
 
 ### build.gradle
 
-릴리즈 모드 옵션 추가
+#### 릴리즈 모드 옵션 추가
 ```
 release {
     signingConfig signingConfigs.debug
@@ -57,7 +60,7 @@ release {
 }
 ```
 
-디버그 모드 옵션 추가
+#### 디버그 모드 옵션 추가
 ```
 debug {
     minifyEnabled false
@@ -66,19 +69,50 @@ debug {
 }
 ```
 
+#### 여러개의 APK 생성 제한
+화면 밀도나 ABI(Application Binary Interface)에 따라 여러 개의 APK를 빌드하는 작업에는 시간이 소요되기 때문에 비활성화
+```
+splits {
+    abi {
+        enable = false
+    }
+    density {
+        enable = false
+    }
+}
+```
+
+#### 덱스 메모리 할당량 처리
+```
+dexOptions {
+    javaMaxHeapSize = "4g"
+}
+```
+
 ---
 
 ## 패키지 이름 변경
 
-VSCODE 기준
-CTRL + SHIFT + F5 단축키로
-"com.reafela.example" 해당 값을 지정하여 전체 변경
+VSCODE 기준   
+CTRL + SHIFT + F5 단축키로   
+아래 값을 지정하여 전체 변경   
+"com.reafela.example"
+
+---
 
 ## 환경 설정
 
 최상위 디렉토리에 .env 파일 값 수정
 
+---
+
 ## pubspec.yaml
 
-하단 값 변경
-name, description, publish_to
+하단 값 변경   
+```
+name
+description
+publish_to
+```
+
+---
