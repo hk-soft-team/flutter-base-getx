@@ -38,7 +38,7 @@ classpath 'com.android.tools.build:gradle:7.2.0'
 ```
 
 ### gradle.properties
-"android\gradle.properties"
+"android\gradle.properties"   
 Gradle에서 사용하는 최적의 JVM 가비지 수집기를 구성하여 빌드 성능을 개선할 수 있습니다. JDK 8은 기본적으로 병렬 가비지 수집기를 사용하도록 구성되어 있지만, JDK 9 이상에서는 G1 가비지 수집기를 사용하도록 구성됩니다.
 
 빌드 성능을 개선하려면 병렬 가비지 수집기로 Gradle 빌드를 테스트하는 것이 좋습니다. gradle.properties에서 다음을 설정합니다.
